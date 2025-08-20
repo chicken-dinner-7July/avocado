@@ -6,7 +6,7 @@ import { Button } from '../ui/button';
 import { Badge } from '../ui/badge';
 import { Product } from '../../types';
 import { useApp } from '../../context/AppContext';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 interface ProductGridProps {
   onSelectProduct: (product: Product) => void;
