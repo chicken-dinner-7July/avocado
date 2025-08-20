@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ArrowLeft, Github, ExternalLink, HelpCircle } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Badge } from '../ui/badge';

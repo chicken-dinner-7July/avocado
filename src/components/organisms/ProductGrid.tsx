@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ProductCard } from '../molecules/ProductCard';
 import { SearchInput } from '../atoms/SearchInput';
 import { Filter, Grid3X3, List } from 'lucide-react';

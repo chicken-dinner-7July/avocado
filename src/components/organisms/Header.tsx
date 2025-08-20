@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Logo } from '../atoms/Logo';
 import { Navigation } from '../molecules/Navigation';
 import { ThemeToggle } from '../atoms/ThemeToggle';

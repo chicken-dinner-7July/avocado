@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { HeroSection } from '../organisms/HeroSection';
 import { ProductGrid } from '../organisms/ProductGrid';
 import { Card, CardContent } from '../ui/card';
