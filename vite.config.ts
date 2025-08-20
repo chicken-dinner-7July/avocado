@@ -9,5 +9,5 @@ export default defineConfig({
       '@': path.resolve(__dirname, './'),
     },
   },
-  base: '/avocado-tree/', // ✅ must match repo name exactly
+  base: '/avogado-tree/', // ✅ must match repo name exactly
 })
