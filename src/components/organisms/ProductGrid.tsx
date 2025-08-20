@@ -6,6 +6,7 @@ import { Button } from '../ui/button';
 import { Badge } from '../ui/badge';
 import { Product } from '../../types';
 import { useApp } from '../../context/AppContext';
+import React, { useState } from 'react';
 
 interface ProductGridProps {
   onSelectProduct: (product: Product) => void;
@@ -13,7 +14,7 @@ interface ProductGridProps {
 
 export function ProductGrid({ onSelectProduct }: ProductGridProps) {
   const { products, search, setSearch } = useApp();
-  const [viewMode, setViewMode] = React.useState<'grid' | 'list'>('grid');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   const filteredProducts = products.filter(product =>
     product.name.toLowerCase().includes(search.toLowerCase()) ||

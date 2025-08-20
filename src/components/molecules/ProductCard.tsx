@@ -59,7 +59,7 @@ export function ProductCard({ product, onSelect, variant = 'default' }: ProductC
               size="sm"
               variant="secondary"
               className="w-8 h-8 p-0 bg-white/90 hover:bg-white shadow-lg"
-              onClick={(e) => {
+              onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
                 e.stopPropagation();
                 window.open(product.repo, '_blank');
               }}
@@ -70,7 +70,7 @@ export function ProductCard({ product, onSelect, variant = 'default' }: ProductC
               size="sm"
               variant="secondary"
               className="w-8 h-8 p-0 bg-white/90 hover:bg-white shadow-lg"
-              onClick={(e) => {
+              onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
                 e.stopPropagation();
                 window.open(product.repo, '_blank');
               }}
