@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { Logo } from '../atoms/Logo';
 import { Navigation } from '../molecules/Navigation';
 import { ThemeToggle } from '../atoms/ThemeToggle';
@@ -14,8 +14,8 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
   const { theme, toggleTheme } = useApp();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-6 h-16 flex items-center justify-between">
+    <header className="fixed top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-border/50">
+      <div className="container mx-auto px-6 h-20 flex items-center justify-between">
         <div 
           className="cursor-pointer" 
           onClick={() => onNavigate('home')}
@@ -27,17 +27,20 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
           <Navigation currentPage={currentPage} onNavigate={onNavigate} />
         </div>
         
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
           <ThemeToggle theme={theme} onToggle={toggleTheme} />
-          <Button size="sm" className="hidden sm:inline-flex">
-            Get Started
+          <Button 
+            size="sm" 
+            className="hidden sm:inline-flex rounded-full bg-primary text-primary-foreground hover:bg-primary/90"
+          >
+            Get in touch
           </Button>
         </div>
       </div>
 
       {/* Mobile Navigation */}
-      <div className="md:hidden border-t border-border/40 bg-background/95 backdrop-blur">
-        <div className="container mx-auto px-6 py-2">
+      <div className="md:hidden border-t border-border/50 bg-background/95 backdrop-blur-md">
+        <div className="container mx-auto px-6 py-3">
           <Navigation currentPage={currentPage} onNavigate={onNavigate} />
         </div>
       </div>

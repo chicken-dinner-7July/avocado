@@ -1,87 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @custom-variant dark (&:is(.dark *));
 
 :root {
   --font-size: 16px;
-  --background: #fefefe;
-  --foreground: #1a1a1a;
+  --background: #ffffff;
+  --foreground: #000000;
   --card: #ffffff;
-  --card-foreground: #1a1a1a;
+  --card-foreground: #000000;
   --popover: #ffffff;
-  --popover-foreground: #1a1a1a;
-  --primary: #16a34a;
-  --primary-foreground: #ffffff;
-  --secondary: #f1f5f9;
-  --secondary-foreground: #0f172a;
-  --muted: #f8fafc;
-  --muted-foreground: #64748b;
-  --accent: #8b5cf6;
-  --accent-foreground: #ffffff;
-  --destructive: #ef4444;
+  --popover-foreground: #000000;
+  --primary: #7EE11A;
+  --primary-foreground: #000000;
+  --secondary: #f8f9fa;
+  --secondary-foreground: #000000;
+  --muted: #f8f9fa;
+  --muted-foreground: #6c757d;
+  --accent: #7EE11A;
+  --accent-foreground: #000000;
+  --destructive: #dc3545;
   --destructive-foreground: #ffffff;
-  --border: #e2e8f0;
+  --border: #e9ecef;
   --input: #ffffff;
   --input-background: #ffffff;
-  --switch-background: #e2e8f0;
+  --switch-background: #e9ecef;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #16a34a;
-  --chart-1: #16a34a;
-  --chart-2: #8b5cf6;
-  --chart-3: #f59e0b;
-  --chart-4: #ef4444;
-  --chart-5: #06b6d4;
-  --radius: 12px;
+  --ring: #7EE11A;
+  --chart-1: #7EE11A;
+  --chart-2: #000000;
+  --chart-3: #6c757d;
+  --chart-4: #dc3545;
+  --chart-5: #17a2b8;
+  --radius: 8px;
   --sidebar: #ffffff;
-  --sidebar-foreground: #1a1a1a;
-  --sidebar-primary: #16a34a;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f8fafc;
-  --sidebar-accent-foreground: #1a1a1a;
-  --sidebar-border: #e2e8f0;
-  --sidebar-ring: #16a34a;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #7EE11A;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #f8f9fa;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #e9ecef;
+  --sidebar-ring: #7EE11A;
 }
 
 .dark {
-  --background: #0f172a;
-  --foreground: #f8fafc;
-  --card: #1e293b;
-  --card-foreground: #f8fafc;
-  --popover: #1e293b;
-  --popover-foreground: #f8fafc;
-  --primary: #22c55e;
-  --primary-foreground: #0f172a;
-  --secondary: #334155;
-  --secondary-foreground: #f8fafc;
-  --muted: #1e293b;
-  --muted-foreground: #94a3b8;
-  --accent: #a855f7;
-  --accent-foreground: #f8fafc;
-  --destructive: #ef4444;
-  --destructive-foreground: #f8fafc;
-  --border: #334155;
-  --input: #1e293b;
-  --ring: #22c55e;
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #111111;
+  --card-foreground: #ffffff;
+  --popover: #111111;
+  --popover-foreground: #ffffff;
+  --primary: #7EE11A;
+  --primary-foreground: #000000;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #ffffff;
+  --muted: #1a1a1a;
+  --muted-foreground: #9ca3af;
+  --accent: #7EE11A;
+  --accent-foreground: #000000;
+  --destructive: #dc3545;
+  --destructive-foreground: #ffffff;
+  --border: #333333;
+  --input: #111111;
+  --ring: #7EE11A;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --chart-1: #22c55e;
-  --chart-2: #a855f7;
-  --chart-3: #f59e0b;
-  --chart-4: #ef4444;
-  --chart-5: #06b6d4;
-  --sidebar: #1e293b;
-  --sidebar-foreground: #f8fafc;
-  --sidebar-primary: #22c55e;
-  --sidebar-primary-foreground: #0f172a;
-  --sidebar-accent: #334155;
-  --sidebar-accent-foreground: #f8fafc;
-  --sidebar-border: #334155;
-  --sidebar-ring: #22c55e;
+  --chart-1: #7EE11A;
+  --chart-2: #ffffff;
+  --chart-3: #9ca3af;
+  --chart-4: #dc3545;
+  --chart-5: #17a2b8;
+  --sidebar: #111111;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #7EE11A;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #1a1a1a;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #333333;
+  --sidebar-ring: #7EE11A;
 }
 
 @theme inline {
@@ -111,9 +107,9 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
   --radius-xl: calc(var(--radius) + 4px);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
@@ -139,35 +135,34 @@
 }
 
 /**
- * Base typography with improved spacing and sizing inspired by modern design
+ * Clean, minimal typography inspired by Movafi design
  */
 @layer base {
   :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
     h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.025em;
-    }
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 600;
-      line-height: 1.3;
+      line-height: 1.1;
       letter-spacing: -0.02em;
     }
 
-    h3 {
-      font-size: 1.5rem;
+    h2 {
+      font-size: 2.25rem;
       font-weight: 600;
-      line-height: 1.4;
+      line-height: 1.2;
       letter-spacing: -0.01em;
     }
 
-    h4 {
-      font-size: 1.25rem;
+    h3 {
+      font-size: 1.75rem;
       font-weight: 600;
-      line-height: 1.4;
+      line-height: 1.3;
+    }
+
+    h4 {
+      font-size: 1.375rem;
+      font-weight: 600;
+      line-height: 1.3;
     }
 
     h5 {
@@ -183,9 +178,9 @@
     }
 
     p {
-      font-size: 1rem;
+      font-size: 1.125rem;
       font-weight: 400;
-      line-height: 1.6;
+      line-height: 1.7;
       color: var(--color-muted-foreground);
     }
 
@@ -216,44 +211,74 @@
   }
 }
 
-/* Custom utility classes */
+/* Minimal utility classes inspired by Movafi */
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    background: linear-gradient(135deg, var(--color-primary), #9AE83F);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
-  .card-hover {
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  .card-minimal {
+    transition: all 0.2s ease-out;
+    border: 1px solid var(--color-border);
   }
   
-  .card-hover:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  .card-minimal:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px -2px rgb(0 0 0 / 0.05);
   }
 
-  .glass-morphism {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+  .section-padding-xl {
+    padding: 8rem 1.5rem;
+  }
+
+  .section-padding-lg {
+    padding: 6rem 1.5rem;
   }
 
   .section-padding {
-    padding: 5rem 1.5rem;
+    padding: 4rem 1.5rem;
   }
 
   @media (min-width: 768px) {
+    .section-padding-xl {
+      padding: 12rem 1.5rem;
+    }
+
+    .section-padding-lg {
+      padding: 8rem 1.5rem;
+    }
+
     .section-padding {
       padding: 6rem 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
+    .section-padding-xl {
+      padding: 16rem 1.5rem;
+    }
+
+    .section-padding-lg {
+      padding: 10rem 1.5rem;
+    }
+
     .section-padding {
       padding: 8rem 1.5rem;
     }
+  }
+
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .minimal-shadow {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   }
 }
 
