@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { AppProvider, useApp } from './context/AppContext';
 import { Header } from './components/organisms/Header';
@@ -11,14 +12,6 @@ type Page = 'home' | 'product' | 'support';
 function AppContent() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
   const { setSelectedProduct } = useApp();
-
-  useEffect(() => {
-    // Initialize theme from system preference
-    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (isDark) {
-      document.documentElement.classList.add('dark');
-    }
-  }, []);
 
   const handleNavigate = (page: Page) => {
     setCurrentPage(page);
