@@ -1,8 +1,6 @@
-
-import { ArrowRight, Code2, Sparkles, Users, Star } from 'lucide-react';
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '../ui/button';
-import { Card, CardContent } from '../ui/card';
-import { Badge } from '../ui/badge';
 
 interface HeroSectionProps {
   onExploreProducts: () => void;
@@ -10,141 +8,95 @@ interface HeroSectionProps {
 
 export function HeroSection({ onExploreProducts }: HeroSectionProps) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-background">
+    <section className="relative overflow-hidden bg-background min-h-screen flex items-center">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
       
-      <div className="relative section-padding">
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative w-full">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
             {/* Left Content */}
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <Badge variant="secondary" className="w-fit">
-                  <Star className="w-3 h-3 mr-1" />
-                  Trusted by developers
-                </Badge>
-                
-                <div className="space-y-4">
-                  <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                    Build.
+            <div className="space-y-12">
+              <div className="space-y-8">
+                <div className="space-y-6">
+                  <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold leading-[0.9] tracking-tight">
+                    We are an independent
                     <br />
-                    <span className="text-gradient">Learn.</span>
+                    <span className="text-primary">software development</span>
                     <br />
-                    Grow.
+                    studio for modern
+                    <br />
+                    <span className="text-primary">digital projects</span>
                   </h1>
                   
-                  <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
-                    Discover innovative software solutions crafted with passion. 
-                    From creative tools to productivity apps, we build software that empowers creators.
+                  <p className="text-xl lg:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
+                    Crafting exceptional digital experiences with cutting-edge technology. 
+                    From web applications to developer tools, we build software that makes a difference.
                   </p>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="pt-4">
                   <Button 
                     size="lg" 
                     onClick={onExploreProducts}
-                    className="group text-base h-12 px-8"
+                    className="h-14 px-8 text-lg rounded-full bg-primary text-primary-foreground hover:bg-primary/90 group"
                   >
-                    <span className="mr-2">Find your solution</span>
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    <span className="mr-3">Explore our work</span>
+                    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                   </Button>
-                  
-                  <Button 
-                    variant="outline" 
-                    size="lg"
-                    className="h-12 px-8 text-base"
-                  >
-                    View on GitHub
-                  </Button>
-                </div>
-              </div>
-
-              {/* Stats */}
-              <div className="flex gap-8 pt-4">
-                <div>
-                  <div className="text-2xl font-bold text-primary">10+</div>
-                  <div className="text-sm text-muted-foreground">Projects</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-primary">250k+</div>
-                  <div className="text-sm text-muted-foreground">Downloads</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-primary">4.8★</div>
-                  <div className="text-sm text-muted-foreground">Rating</div>
                 </div>
               </div>
             </div>
 
-            {/* Right Content - Feature Cards */}
-            <div className="relative">
-              <div className="grid grid-cols-2 gap-4">
-                {/* Writing Course Card */}
-                <Card className="card-hover border-0 shadow-lg bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20">
-                  <CardContent className="p-6 space-y-4">
-                    <div className="w-12 h-12 rounded-xl bg-green-500 flex items-center justify-center">
-                      <Code2 className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-green-900 dark:text-green-100">Development Tools</h3>
-                      <p className="text-sm text-green-700 dark:text-green-300 mt-1">
-                        Modern development utilities
-                      </p>
-                    </div>
-                    <Badge className="bg-green-500 text-white">New</Badge>
-                  </CardContent>
-                </Card>
-
-                {/* Business Card */}
-                <Card className="card-hover border-0 shadow-lg bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 translate-y-8">
-                  <CardContent className="p-6 space-y-4">
-                    <div className="w-12 h-12 rounded-xl bg-purple-500 flex items-center justify-center">
-                      <Sparkles className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-purple-900 dark:text-purple-100">Creative Apps</h3>
-                      <p className="text-sm text-purple-700 dark:text-purple-300 mt-1">
-                        Design & creativity tools
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Writing Card */}
-                <Card className="card-hover border-0 shadow-lg bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20">
-                  <CardContent className="p-6 space-y-4">
-                    <div className="w-12 h-12 rounded-xl bg-blue-500 flex items-center justify-center">
-                      <Users className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-blue-900 dark:text-blue-100">Collaboration</h3>
-                      <p className="text-sm text-blue-700 dark:text-blue-300 mt-1">
-                        Team productivity solutions
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Analytics Card */}
-                <Card className="card-hover border-0 shadow-lg bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 translate-y-8">
-                  <CardContent className="p-6 space-y-4">
-                    <div className="w-12 h-12 rounded-xl bg-orange-500 flex items-center justify-center">
-                      <Code2 className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-orange-900 dark:text-orange-100">Analytics</h3>
-                      <p className="text-sm text-orange-700 dark:text-orange-300 mt-1">
-                        Data visualization tools
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
+            {/* Right Content - Minimal Illustration */}
+            <div className="relative flex items-center justify-center lg:justify-end">
+              <div className="relative w-full max-w-lg">
+                {/* Main Circle */}
+                <div className="relative w-80 h-80 lg:w-96 lg:h-96 mx-auto">
+                  <div className="absolute inset-0 rounded-full bg-primary/10 border-2 border-primary/20"></div>
+                  
+                  {/* Floating Elements */}
+                  <div className="absolute top-8 left-8 w-16 h-16 rounded-xl bg-primary flex items-center justify-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-black">
+                      <path d="M9 12L11 14L15 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2"/>
+                    </svg>
+                  </div>
+                  
+                  <div className="absolute top-16 right-4 w-12 h-12 rounded-lg bg-background border-2 border-border flex items-center justify-center">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-foreground">
+                      <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  
+                  <div className="absolute bottom-12 left-12 w-14 h-14 rounded-full bg-background border-2 border-border flex items-center justify-center">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-foreground">
+                      <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  
+                  <div className="absolute bottom-8 right-8 w-10 h-10 rounded-md bg-muted border border-border"></div>
+                  
+                  {/* Connection Lines */}
+                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 384 384">
+                    <path 
+                      d="M80 80 L304 160 M304 64 L192 192 M80 304 L192 192" 
+                      stroke="currentColor" 
+                      strokeWidth="1" 
+                      strokeDasharray="5,5" 
+                      className="text-border opacity-50"
+                      fill="none"
+                    />
+                  </svg>
+                </div>
+                
+                {/* Background Dots */}
+                <div className="absolute -top-8 -right-8 w-4 h-4 rounded-full bg-primary/30"></div>
+                <div className="absolute -bottom-12 -left-4 w-6 h-6 rounded-full bg-muted border border-border"></div>
+                <div className="absolute top-1/3 -left-12 w-3 h-3 rounded-full bg-foreground/20"></div>
               </div>
-
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-xl" />
-              <div className="absolute -bottom-8 -left-4 w-32 h-32 bg-gradient-to-br from-accent/10 to-primary/10 rounded-full blur-2xl" />
             </div>
           </div>
         </div>

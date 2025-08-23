@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { Button } from '../ui/button';
 
 interface NavigationProps {
@@ -14,17 +14,17 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
   ];
 
   return (
-    <nav className="flex gap-1 p-1 bg-muted rounded-lg">
+    <nav className="flex gap-8">
       {navItems.map((item) => (
         <Button
           key={item.id}
-          variant={currentPage === item.id ? 'secondary' : 'ghost'}
+          variant="ghost"
           size="sm"
           onClick={() => onNavigate(item.id)}
-          className={`px-4 py-2 rounded-md transition-all ${
+          className={`px-0 py-0 h-auto rounded-none border-b-2 transition-colors ${
             currentPage === item.id 
-              ? 'bg-background shadow-sm text-foreground' 
-              : 'text-muted-foreground hover:text-foreground hover:bg-background/50'
+              ? 'border-primary text-foreground bg-transparent hover:bg-transparent' 
+              : 'border-transparent text-muted-foreground hover:text-foreground hover:bg-transparent'
           }`}
         >
           {item.label}
